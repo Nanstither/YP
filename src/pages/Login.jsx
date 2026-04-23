@@ -50,13 +50,13 @@ export default function Login() {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {error && (
-            <div className={`flex items-start gap-2 p-3 rounded-lg text-xs border ${
+            <div className={`flex items-start gap-2 p-3 rounded-lg text-xs border relative ${
               error.includes('Доступ запрещён')
                 ? 'bg-orange-50 border-orange-200 text-orange-700'
                 : 'bg-red-50 border-red-200 text-red-700'
             }`}>
-              <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
-              <div>
+              <AlertCircle className="w-4 h-4 shrink-0 absolute top-5" />
+              <div className='w-full realtive'>
                 <p className="font-semibold">{error.includes('Доступ запрещён') ? 'Доступ запрещён' : 'Ошибка'}</p>
                 <p className="opacity-90">{error}</p>
               </div>

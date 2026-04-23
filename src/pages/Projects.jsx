@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getProjects, createProject, updateProject, deleteProject } from '../services/api';
 import ProjectModal from '../components/ProjectModal';
-import { Plus, Search, X, Pencil, Trash2, ChevronLeft, ChevronRight, ArrowUpDown, CalendarDays, Tag, Hash, LayoutGrid, Filter } from 'lucide-react';
+import { Plus, Search, X, Pencil, Trash2, ChevronLeft, ChevronRight, ArrowUpDown, CalendarDays, KeyRound, Hash, Type, Filter, Info } from 'lucide-react';
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -134,9 +134,9 @@ export default function Projects() {
             <thead className="bg-slate-50/50 border-b border-slate-200">
               <tr>
                 <SortHeader column="id" label="ID" icon={Hash} />
-                <SortHeader column="name" label="Название" icon={LayoutGrid} />
-                <SortHeader column="code" label="Код" icon={Tag} />
-                <SortHeader column="status" label="Статус" icon={Tag} />
+                <SortHeader column="name" label="Название" icon={Type} />
+                <SortHeader column="code" label="Код" icon={KeyRound} />
+                <SortHeader column="status" label="Статус" icon={Info} />
                 <SortHeader column="updated_at" label="Обновлено" icon={CalendarDays} />
                 <th className="px-4 py-3 text-right w-24 text-xs font-semibold text-slate-500 uppercase tracking-wider">Действия</th>
               </tr>
